@@ -22,7 +22,7 @@ def exercice2():
 def exercice3():
     return render_template('exercice3.html')
 
-# Route pour Actualité
+# Route pour actualite
 @app.route('/actualite')
 def actualite():
     return render_template('actualite.html')
