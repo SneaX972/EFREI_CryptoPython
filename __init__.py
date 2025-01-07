@@ -22,6 +22,11 @@ def exercice2():
 def exercice3():
     return render_template('exercice3.html')
 
+# Route pour Actualité
+@app.route('/actualite')
+def actualite():
+    return render_template('actualite.html')
+
 # Point d'entrée de l'application
 if __name__ == '__main__':
     app.run(debug=True)
