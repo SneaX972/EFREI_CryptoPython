@@ -7,6 +7,42 @@ app = Flask(__name__)
 key = Fernet.generate_key()  # Génère une clé unique
 f = Fernet(key)  # Initialisation de Fernet avec la clé
 
+# Route pour exercice 1
+@app.route('/exercice1')
+def exercice1():
+    return render_template('exercice1.html')
+
+# Route pour exercice 2
+@app.route('/exercice2')
+def exercice2():
+    return render_template('exercice2.html')
+
+# Route pour exercice 3
+@app.route('/exercice3')
+def exercice3():
+    return render_template('exercice3.html')
+
+# Point d'entrée de l'application
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @app.route('/')
 def hello_world():
     return render_template('hello.html')
