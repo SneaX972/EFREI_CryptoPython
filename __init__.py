@@ -26,10 +26,15 @@ def exercice3():
 @app.route('/actualite')
 def actualite():
     return render_template('actualite.html')
-# Route pour exercice 1
+# Route pour svg
 @app.route('/svg')
 def svg():
     return render_template('svg.html')
+
+# Route pour chenille
+@app.route('/chenille')
+def chenille():
+    return render_template('chenille')
 
 # Point d'entrée de l'application
 if __name__ == '__main__':
