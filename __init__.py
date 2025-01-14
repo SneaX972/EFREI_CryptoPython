@@ -34,7 +34,7 @@ def svg():
 # Route pour chenille
 @app.route('/chenille')
 def chenille():
-    return render_template('chenille')
+    return render_template('chenille.html')
 
 # Point d'entrée de l'application
 if __name__ == '__main__':
