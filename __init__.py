@@ -26,6 +26,10 @@ def exercice3():
 @app.route('/actualite')
 def actualite():
     return render_template('actualite.html')
+# Route pour exercice 1
+@app.route('/svg')
+def svg():
+    return render_template('svg.html')
 
 # Point d'entrée de l'application
 if __name__ == '__main__':
