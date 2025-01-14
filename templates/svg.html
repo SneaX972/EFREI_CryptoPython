@@ -1,146 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison Dessinée</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #cce7ff;
-        }
-
-        .scene {
-            position: relative;
-            width: 300px;
-            height: 300px;
-        }
-
-        .house {
-            position: absolute;
-            bottom: 50px;
-            left: 50px;
-            width: 200px;
-            height: 150px;
-            background-color: #ffcc33;
-            border: 2px solid #000;
-        }
-
-        .roof {
-            position: absolute;
-            bottom: 200px;
-            left: 40px;
-            width: 0;
-            height: 0;
-            border-left: 110px solid transparent;
-            border-right: 110px solid transparent;
-            border-bottom: 70px solid #ff5733;
-        }
-
-        .door {
-            position: absolute;
-            bottom: 0;
-            left: 120px;
-            width: 40px;
-            height: 70px;
-            background-color: #cc6600;
-            border: 2px solid #000;
-        }
-
-        .window {
-            position: absolute;
-            bottom: 70px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #ffffff;
-            border: 2px solid #000;
-        }
-
-        .window-frame {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-        }
-
-        .window-frame div {
-            flex: 1;
-            border-right: 1px solid #000;
-            border-bottom: 1px solid #000;
-        }
-
-        .window-frame div:nth-child(2) {
-            border-right: none;
-        }
-
-        .sun {
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 80px;
-            height: 80px;
-            background-color: #ffdd33;
-            border-radius: 50%;
-            border: 2px solid #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .sun::before {
-            content: "";
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            border: 8px solid #ffdd33;
-            border-radius: 50%;
-            opacity: 0.5;
-        }
-
-        .bush {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            background-color: #33cc33;
-            border-radius: 50%;
-            border: 2px solid #000;
-        }
-
-        .flower {
-            position: absolute;
-            bottom: 0;
-            right: 20px;
-            width: 20px;
-            height: 20px;
-            background-color: #ff3333;
-            border-radius: 50%;
-            border: 2px solid #000;
-        }
-    </style>
+    <title>Maison en SVG</title>
 </head>
 <body>
-    <div class="scene">
-        <div class="house"></div>
-        <div class="roof"></div>
-        <div class="door"></div>
-        <div class="window">
-            <div class="window-frame">
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-        <div class="bush"></div>
-        <div class="flower"></div>
-        <div class="sun"></div>
-    </div>
-</body>
-</html>
+    <svg width="750" height="750" style="background-color: rgba(200, 200, 200, 0.5);">
+        <!-- Soleil -->
+        <circle style="fill: yellow; stroke: orange; stroke-width: 5px;" cx="650" cy="100" r="50" />
+
+        <!-- Yeux du soleil -->
+        <circle style="fill: black;" cx="635" cy="90" r="5" />
+        <circle style="fill: black;" cx="665" cy="90" r="5" />
+
+        <!-- Sourire du soleil -->
+        <path d="M635,110 Q650,125 665,110" style="fill: none; stroke: black; stroke-width: 3px;" />
+
+        <!-- Nuages -->
+        <ellipse style="fill: lightgray;" cx="150" cy="100" rx="50" ry="30" />
+        <ellipse style="fill: lightgray;" cx="200" cy="100" rx="50" ry="30" />
+        <ellipse style="fill: lightgray;" cx="180" cy="80" rx="40" ry="20" />
+
+        <ellipse style="fill: lightgray;" cx="500" cy="150" rx="50" ry="30" />
+        <ellipse style="fill: lightgray;" cx="550" cy="150" rx="50" ry="30" />
+        <ellipse style="fill: lightgray;" cx="530" cy="130" rx="40" ry="20" />
+
+        <!-- Toit -->
+        <polygon style="fill: red; stroke: black; stroke-width: 2px;" points="250,300 500,300 375,200" />
+
+        <!-- Corps de la maison -->
+        <rect style="fill: orange; stroke: black; stroke-width: 2px;" x="250" y="300" width="250" height="200" />
+
+        <!-- Fenêtre -->
+        <rect style="fill: lightblue; stroke: black; stroke-width: 2px;" x="280" y="330" width="60" height="60" />
+        <line style="stroke: black; stroke-width: 2px;" x1="280" y1="360" x2="340" y2="360" />
+        <line style="stroke: black; stroke-width: 2px;" x1="310" y1="330" x2="310" y2="390" />
+
+        <!-- Porte -->
+        <rect style="fill: brown; stroke: black; stroke-width: 2px;" x="360" y="380" width="60" height="120" />
+        <circle style="fill: black;" cx="415" cy="440" r="5" />
+
+        <!-- Fleurs -->
+        <circle style="fill: red;" cx="230" cy="500" r="10" />
+        <rect
