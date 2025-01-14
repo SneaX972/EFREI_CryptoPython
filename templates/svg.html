@@ -1,15 +1,146 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Dessinée</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #cce7ff;
+        }
 
+        .scene {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .house {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            width: 200px;
+            height: 150px;
+            background-color: #ffcc33;
+            border: 2px solid #000;
+        }
+
+        .roof {
+            position: absolute;
+            bottom: 200px;
+            left: 40px;
+            width: 0;
+            height: 0;
+            border-left: 110px solid transparent;
+            border-right: 110px solid transparent;
+            border-bottom: 70px solid #ff5733;
+        }
+
+        .door {
+            position: absolute;
+            bottom: 0;
+            left: 120px;
+            width: 40px;
+            height: 70px;
+            background-color: #cc6600;
+            border: 2px solid #000;
+        }
+
+        .window {
+            position: absolute;
+            bottom: 70px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            border: 2px solid #000;
+        }
+
+        .window-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .window-frame div {
+            flex: 1;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        .window-frame div:nth-child(2) {
+            border-right: none;
+        }
+
+        .sun {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 80px;
+            height: 80px;
+            background-color: #ffdd33;
+            border-radius: 50%;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sun::before {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 8px solid #ffdd33;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .bush {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #33cc33;
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+
+        .flower {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #ff3333;
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+    </style>
 </head>
-
 <body>
-
-<svg width="750" height="750" style="background-color:rgba(200,200,200, 0.5)">
-<circle id="foo" style="fill:none; stroke:red; stroke-width:30px;" cx="375" cy="375" r="200" />
-<rect style="fill:green; stroke:blue; stroke-width:30px;" x="230" y="300" width="290" height="150" />
-<polygon style="fill:green; stroke:blue; stroke-width:3px;" points="0 0, 100 100, 0 100"/>
-</svg>
-
+    <div class="scene">
+        <div class="house"></div>
+        <div class="roof"></div>
+        <div class="door"></div>
+        <div class="window">
+            <div class="window-frame">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="bush"></div>
+        <div class="flower"></div>
+        <div class="sun"></div>
+    </div>
 </body>
 </html>
