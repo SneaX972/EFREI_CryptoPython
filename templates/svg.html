@@ -4,29 +4,15 @@
 </head>
 <body>
     <svg width="750" height="750" style="background-color: rgba(200, 200, 200, 0.5);">
-       .sun {
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 80px;
-            height: 80px;
-            background-color: #ffdd33;
-            border-radius: 50%;
-            border: 2px solid #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        <!-- Soleil -->
+        <circle style="fill: yellow; stroke: orange; stroke-width: 5px;" cx="650" cy="100" r="50" />
 
-        .sun::before {
-            content: "";
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            border: 8px solid #ffdd33;
-            border-radius: 50%;
-            opacity: 0.5;
-        }
+        <!-- Yeux du soleil -->
+        <circle style="fill: black;" cx="635" cy="90" r="5" />
+        <circle style="fill: black;" cx="665" cy="90" r="5" />
+
+        <!-- Sourire du soleil -->
+        <path d="M635,110 Q650,125 665,110" style="fill: none; stroke: black; stroke-width: 3px;" />
 
         <!-- Nuages -->
         <ellipse style="fill: lightgray;" cx="150" cy="100" rx="50" ry="30" />
