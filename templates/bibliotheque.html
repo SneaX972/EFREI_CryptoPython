@@ -20,16 +20,14 @@ function controler(){
 </script>
 </head>
 <body>
-<h1>Mes outils</h1>
+<h1>Afficher l'image</h1>
 <hr>
 <h2>Boite de dialogue</h2>
 <button onclick="affichage()">Afficher</button>
 <hr>
-<p id="DuTexte">Ma phrase de texte</p>
-<button onclick="Image_1()">Image_1</button>
-<button onclick="Image_2()">Image_2</button>
-<button onclick="Image_3()">Image_3</button>
-<button onclick="cacher()">Cacher</button>
+<button onclick="showImage('static/golmont.jpg')">Image 1</button>
+<button onclick="showImage('static/laporte.jpg')">Image 2</button>
+<button onclick="showImage('static/golmont.jpg')">Image 3</button>
 <hr>
 <p>Option<input type="checkbox" id="Control"></p>
 <button onclick="controler()">Check</button>
