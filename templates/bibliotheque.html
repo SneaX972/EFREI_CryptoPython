@@ -29,6 +29,19 @@ function controler(){
 <button onclick="showImage('static/laporte.jpg')">Image 2</button>
 <button onclick="showImage('static/golmont.jpg')">Image 3</button>
 <hr>
+<div id="image-container">
+        <!-- L'image s'affichera ici -->
+        <img id="displayed-image" src="" alt="Cliquez sur un bouton pour afficher une image">
+    </div>
+<script>@param {string} imagePath - Chemin de l'image à afficher
+         */
+        function showImage(imagePath) {
+            const imageElement = document.getElementById('displayed-image');
+            imageElement.src = imagePath; // Change la source de l'image
+            imageElement.alt = `Image affichée depuis ${imagePath}`; // Ajoute une description
+        }
+</script>
+
 <p>Option<input type="checkbox" id="Control"></p>
 <button onclick="controler()">Check</button>
 
