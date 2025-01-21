@@ -1,47 +1,56 @@
 <html><head>
+<script>
+function affichage() {
+    // Gestion des cases et des images
+    const checkbox1 = document.getElementById('imageCheckbox1');
+    const image1 = document.getElementById('monImage1');
+    
+    const checkbox2 = document.getElementById('imageCheckbox2');
+    const image2 = document.getElementById('monImage2');
+    
+    const checkbox3 = document.getElementById('imageCheckbox3');
+    const image3 = document.getElementById('monImage3');
+    
+    // Affichage/mise à jour des images
+    image1.style.display = checkbox1.checked ? "block" : "none";
+    image2.style.display = checkbox2.checked ? "block" : "none";
+    image3.style.display = checkbox3.checked ? "block" : "none";
+    
+    // Vérification : Si aucune image n'est cochée, alerte l'utilisateur
+    if (!checkbox1.checked && !checkbox2.checked && !checkbox3.checked) {
+        alert("Veuillez cocher au moins une case pour afficher les images.");
+    }
+}
+</script>
 </head>
 <body>
-<h1>Afficher l'image</h1>
- <style>
-        /* Style pour l'image et les boutons */
-        #image-container {
-            text-align: center;
-            margin: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+<h1>Mes outils</h1>
 <hr>
+
+<!-- Case cochable pour sélectionner les images -->
+<h2>Boîte de dialogue</h2>
+<p>
+    <input type="checkbox" id="imageCheckbox1">
+    <label for="imageCheckbox1">Image 1</label>
+</p>
+<p>
+    <input type="checkbox" id="imageCheckbox2">
+    <label for="imageCheckbox2">Image 2</label>
+</p>
+<p>
+    <input type="checkbox" id="imageCheckbox3">
+    <label for="imageCheckbox3">Image 3</label>
+</p>
+
+<!-- Bouton pour afficher les images -->
 <button onclick="affichage()">Afficher</button>
+
+<!-- Images associées -->
+<img id="monImage1" src="/static/laporte.png" alt="Image 1" style="display: block; margin-top: 10px;">
+
+<img id="monImage2" src="/static/golmont.png" alt="Image 2" style="display: block; margin-top: 10px;">
+
+<img id="monImage3" src="/static/images/laporte.png" alt="Image 3" style="display: block; margin-top: 10px;">
 <hr>
-<button onclick="showImage('static/golmont.jpg')">Image 1</button>
-<button onclick="showImage('static/laporte.jpg')">Image 2</button>
-<button onclick="showImage('static/golmont.jpg')">Image 3</button>
-<hr>
-<div id="image-container">
-        <!-- L'image s'affichera ici -->
-        <img id="displayed-image" src="" alt="Cliquez sur un bouton pour afficher une image">
-    </div>
-<script>@param {string} imagePath - Chemin de l'image à afficher
-         */
-        function showImage(imagePath) {
-            const imageElement = document.getElementById('displayed-image');
-            imageElement.src = imagePath; // Change la source de l'image
-            imageElement.alt = `Image affichée depuis ${imagePath}`; // Ajoute une description
-        }
-</script>
-
-<p>Option<input type="checkbox" id="Control"></p>
-<button onclick="controler()">Check</button>
-
-
 
 </body></html>
