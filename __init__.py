@@ -41,6 +41,11 @@ def chenille():
 def jeux_des_des():
     return render_template('jeux_des_des.html')
 
+# Route pour exercice 3
+@app.route('/bibliotheque')
+def bibliotheque():
+    return render_template('bibliotheque.html')
+
 # Point d'entrée de l'application
 if __name__ == '__main__':
     app.run(debug=True)
