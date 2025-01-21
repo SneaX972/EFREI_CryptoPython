@@ -39,7 +39,7 @@ def chenille():
 # Route pour exercice 3
 @app.route('/jeux_des_des')
 def jeux_des_des():
-    return render_template('jeux_des_des')
+    return render_template('jeux_des_des.html')
 
 # Point d'entrée de l'application
 if __name__ == '__main__':
