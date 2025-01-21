@@ -36,6 +36,11 @@ def svg():
 def chenille():
     return render_template('chenille.html')
 
+# Route pour exercice 3
+@app.route('/jeu_des_des')
+def jeu_des_des():
+    return render_template('jeu_des_des')
+
 # Point d'entrée de l'application
 if __name__ == '__main__':
     app.run(debug=True)
