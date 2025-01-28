@@ -46,6 +46,11 @@ def jeux_des_des():
 def bibliotheque():
     return render_template('bibliotheque.html')
 
+# Route pour exercice 3
+@app.route('/jeu')
+def jeu():
+    return render_template('jeu.html')
+
 # Point d'entrée de l'application
 if __name__ == '__main__':
     app.run(debug=True)
