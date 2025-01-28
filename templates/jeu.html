@@ -2,7 +2,9 @@
 
 <script>
 function lancer(){
-          alert("le barillet tourne");
+	const chiffre = Math.floor(Math.random() * 6) + 1;
+          alert("le barillet tourne " + chiffre);
+	
 }
 
 function afficherNumeroBarillet(num){
@@ -24,7 +26,7 @@ function afficherNumeroBarillet(num){
 	<circle id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(2)"></circle>
 	<circle id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(3)"></circle>
 	<circle id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(4)"></circle>
-	<circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="red" onclick="afficherNumeroBarillet(5)"></circle>
+	<circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(5)"></circle>
 	<circle id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(6)"></circle>
 	<circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black"></circle>
 	</svg>	
