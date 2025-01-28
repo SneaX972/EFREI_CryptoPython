@@ -1,6 +1,3 @@
-<html><head></head><body>
-
-<script>
 <html lang="fr"><head>
 <meta charset="UTF-8">
 <title>Roulette Russe</title>
@@ -17,7 +14,7 @@ function lancer() {
     
     if (couleur === "red") {
         setTimeout(() => {
-            alert("PERDUUUU !");
+            alert("PERDUUUU");
         }, 500);
     } else {
         alert("GAGNEEEE");
@@ -32,23 +29,23 @@ function afficherChambre(numero) {
 </script>
 </head>
 <body>
+<h1>Roulette Russe</h1>
+
+<svg width="200" height="200" style="background-color:antiquewhite">
+    <circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none"></circle>
+    <circle id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(1)"></circle>
+    <circle id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="red" onclick="afficherChambre(2)"></circle>
+    <circle id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(3)"></circle>
+    <circle id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(4)"></circle>
+    <circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="red" onclick="afficherChambre(5)"></circle>
+    <circle id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherChambre(6)"></circle>
+    <circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black"></circle>
+</svg>
+
+<button onclick="lancer()">Jouer</button>
+
+<audio id="gunshot-sound" src="/static/sound/gun.mp3"></audio>
 
 
 
-
-	<h1>Roulette Russe</h1>
-
-	<svg width="200" height="200" style="background-color:antiquewhite">
-	<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none"></circle>
-	<circle id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(1)"></circle>
-	<circle id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(2)"></circle>
-	<circle id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(3)"></circle>
-	<circle id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(4)"></circle>
-	<circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(5)"></circle>
-	<circle id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" onclick="afficherNumeroBarillet(6)"></circle>
-	<circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black"></circle>
-	</svg>	
-	
-	<button onclick="lancer()">Jouer</button>	
-	
 </body></html>
